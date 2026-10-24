@@ -58,6 +58,7 @@ h2 .ico{font-size:1.3rem}
 .intro{color:var(--muted);margin:0 0 14px}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
 .panel p{margin:0}
+.panel p.src{margin-top:10px;font-size:.85rem;line-height:1.45;color:var(--muted)}
 .btn{display:inline-block;margin-top:12px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:999px}
 .support{position:relative;overflow:hidden;text-align:center;padding:26px 20px 22px;border-radius:24px;color:var(--ink);background:var(--news-soft);border:1px solid rgba(255,138,31,.35);box-shadow:var(--shadow)}
 .support::before,.support::after{content:"";position:absolute;border-radius:50%;background:rgba(255,138,31,.08)}

@@ -1,4 +1,11 @@
 (function(){
+  // Se la pagina viene mostrata dentro un altro sito, la nasconde e offre il link all'originale
+  if(window.top!==window.self){
+    document.body.textContent='';
+    var p=document.createElement('p');p.style.padding='24px';p.style.fontFamily='system-ui,sans-serif';
+    var a=document.createElement('a');a.href=location.href;a.target='_top';a.rel='noopener';a.textContent='Apri InfoBandi Italia nel suo sito ufficiale';
+    p.appendChild(a);document.body.appendChild(p);return;
+  }
   var $=function(id){return document.getElementById(id)};
   var eur=new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR'});
   var fig=0;
