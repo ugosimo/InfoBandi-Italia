@@ -7,8 +7,11 @@ Sito statico: solo HTML, CSS e JavaScript, nessuna installazione richiesta.
 ## Struttura
 
 ```
-index.html              la pagina
+index.html              la pagina (testi e struttura)
 manifest.webmanifest    nome e icone per "Aggiungi a schermata Home"
+assets/style.css        stile grafico e font
+assets/app.js           calcolatore e pulsante "torna su"
+assets/fonts/           font Bricolage Grotesque (licenza SIL OFL, vedi OFL.txt)
 assets/                 logo e icone
 .nojekyll               dice a GitHub Pages di pubblicare i file così come sono
 ```
@@ -28,6 +31,10 @@ Tutto si trova in `index.html`:
 - **Messaggi del banner NEWS**: cerca `ticker-move`
 - **Link donazioni**: cerca `donate-link`
 - **Parametri del calcolatore** (soglia, % extra, INPS, imposta): cerca `p-soglia`
+
+## Sicurezza
+
+La pagina ha una Content Security Policy (il tag `meta http-equiv="Content-Security-Policy"` in `index.html`) che permette di caricare solo file di questo sito. Per questo stile e script stanno in `assets/style.css` e `assets/app.js`: non aggiungere blocchi `<style>` o `<script>` dentro `index.html`, né attributi `style="..."` od `onclick="..."`, perché verrebbero bloccati. Anche immagini, font o script presi da altri siti verrebbero bloccati, a meno di aggiornare la policy. I normali link verso altri siti funzionano.
 
 ## Avvertenza
 
